@@ -1,0 +1,105 @@
+.container{
+	margin: 0 auto;
+	padding: 0;
+	font-family: arial, sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+@keyframes tuna {
+	0%   {background-color: #44B3C2; color: #FFFFFF;}
+	25%  {background-color: #EF7126; color: #F9E559;}
+    50%  {background-color: #9F6164; color: #F8DEBD;}
+    75%  {background-color: #44B3C2; color: #FFFFFF;}
+    100% {background-color: #218C8D;  color: #F9E559;}
+}
+.title h1{
+	text-align: center;
+	font-size: 60px;
+	text-transform: uppercase;
+	color: #b94602;
+	margin: 25px 0;
+	letter-spacing: 3px;
+	animation: tuna 10s infinite alternate; /*h1*/
+}  
+
+
+.clear{
+	clear: both;
+}
+
+.image{
+	float: left;
+	width: 33.3333%;
+	padding: 15px;
+	position: relative;
+}
+
+.img-boder{
+	padding: 15px;
+	border-radius: 20px;
+/*	transition: all 0.2s ease;*/
+/*	box-shadow:  1px 9px 17px 0px rgba(48, 41, 5, 0.36);
+	box-shadow: 8px 17px 56px -4px rgba(237,161,237,1);
+	box-shadow: -30px -23px 56px -4px rgba(237,161,237,1);*/
+	animation: tuna1 1s infinite alternate;
+}
+@keyframes tuna1{
+	/*25% {box-shadow: 0px -15px 25px -5px rgba(255,212,255,0.8);}
+	50%	{box-shadow: 15px 0px 25px -5px rgba(255,212,255,0.8)}
+	75%	{box-shadow: 0px 15px 25px -5px rgba(255,212,255,0.8)}
+	100%{box-shadow: -15px 0px 25px -5px rgba(255,212,255,0.8);}*/
+	0%{box-shadow: 0px 0px 40px -13px rgba(252,169,252,1);transform: scale(1.001);}
+	50%{box-shadow: 0px 0px 30px -9px rgba(252,169,252,1);;}
+	100%{box-shadow: 2px 2px 35px -8px rgba(252,93,252,0.93);}
+
+}
+
+.img-boder img{
+	border-radius: 20px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer; 
+}
+
+
+.text-cont{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
+	border-radius: 20px;
+	padding-top: 100px;
+}
+
+.text{
+	text-align: center;
+	color: white;
+	opacity: 0;
+	font-size: 0;
+	transition: all 0.5s ease-in-out;
+	animation: tuna2 1s infinite alternate;
+}
+
+
+.text-cont:hover{
+	box-shadow: inset 0 0 0 222px rgba(200,95,66, 0.4), inset 0 0 0 16px rgba(255,255,255,0.8), 0 1px 2px rgba(0,0,0,0.1);
+}
+@keyframes tuna2{
+	50%  {color:#fdfdfd; color: #bddbfb}
+	100% {color: #f5bdfb; color: #fbfbfb}
+}
+
+.text-cont:hover .text{
+	opacity: 1;
+	font-weight: bold;
+	font-size: 1em;
+	transform: rotate(360deg);
+}
